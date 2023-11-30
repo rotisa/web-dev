@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title> </title>
+<body>
+    <style>
+        /* Basic styling for the navigation bar */
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        /* Style for the navigation links */
+        .navbar a {
+            float: left;
+			font-family: Tahoma;
+            font-size: 15px;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            border-radius: 50%; /* Make the buttons circular */
+            transition: all 0.3s; /* Add smooth transition on hover */
+        }
+
+        /* Change the button color on hover */
+        .navbar a:hover {
+            background-color: #555; /* Change to a lighter color on hover */
+            transform: scale(1.1); /* Expand the button on hover */
+        }
+    </style>
+	<div class="navbar">
+		<a href="#">Home</a>
+		<a href="#">About</a>
+		<a href="#">Services</a>
+		<a href="#">Contact</a>
+	</div>
+	<div class="video-container">
+        <video autoplay muted loop id="video-background">
+            <source src="your-video.mp4" type="video/mp4">
+            <!-- Add other video formats (e.g., WebM, Ogg) for cross-browser support -->
+        </video>
+        <div class="content">
+            <!-- Your content goes here -->
+        </div>
+    </div>
+    <script>
+        const phrases = ["_","__","___","___h","___ha","___hal","___hall","___hallo","___hallow","___hallowe","___hallowee","___halloween","___halloween_","___halloween__", "___halloween___","___halloween__","___halloween_","___halloween","___hallowee","___hallowe","___hallow","___hallo","___hall","___hal","___ha","___h","___","__","_"," "];
+        let currentIndex = 0;
+        
+        function updateTitle() {
+            document.title = phrases[currentIndex];
+            currentIndex = (currentIndex + 1) % phrases.length;
+        }
+        
+        setInterval(updateTitle, 200);
+    </script>
+</head>
+</body>
+</html>
